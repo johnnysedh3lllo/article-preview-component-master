@@ -230,7 +230,7 @@ body {
   .card__details__social {
     inline-size: max-content;
     block-size: 55px;
-    inset-inline-start: 276px;
+    inset-inline-start: 274px;
     inset-block-start: -79px;
     z-index: 1000;
     border-radius: 0.5rem;
