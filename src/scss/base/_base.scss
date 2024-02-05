@@ -1,0 +1,209 @@
+body {
+  padding: 1.5rem;
+  font-family: $ff-primary;
+  background: $clr-blue-100;
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  background: $clr-white;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 22px 40px 57px -53px rgba(0, 0, 0, 0.24);
+  -webkit-box-shadow: 22px 40px 57px -53px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 22px 40px 57px -53px rgba(0, 0, 0, 0.24);
+
+  &__img--wrapper {
+    block-size: 197px;
+    background: url("/src/assets/drawers.jpg") $clr-white no-repeat;
+    background-size: cover;
+    background-position-y: -19px;
+  }
+
+  &__main {
+    display: grid;
+    // padding: 0 2rem;
+    &__content {
+      display: grid;
+      gap: 1rem;
+      padding: 2.2rem 0 1.3rem;
+      &__title {
+        word-spacing: 1px;
+        color: $clr-blue-400;
+      }
+      &__par {
+        font-size: $fs-primary-100;
+        word-spacing: 0.65px;
+        color: $clr-blue-200;
+      }
+    }
+  }
+  &__details {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.7rem 0rem;
+    position: relative;
+
+    &__content {
+      display: flex;
+      align-items: center;
+      justify-items: center;
+      gap: 1rem;
+      &__img {
+        inline-size: 2.5rem;
+        block-size: 2.5rem;
+        border-radius: 100px;
+      }
+      &__author {
+        font-size: $fs-primary-100;
+        &__name {
+          color: $clr-blue-400;
+        }
+        &__date {
+          color: $clr-blue-200;
+        }
+      }
+    }
+    &__btn {
+      align-self: center;
+      border: 0;
+      border-radius: 100%;
+      z-index: 1;
+      inline-size: 2rem;
+      block-size: 2rem;
+      display: grid;
+      place-items: center;
+      color: $clr-blue-100;
+      transition: $transition;
+      &__icon {
+        transition: $transition;
+      }
+
+      &.active {
+        background-color: $clr-blue-300;
+      }
+
+      &.active &__icon {
+        fill: $clr-white;
+      }
+
+      &:focus {
+        outline: 1px solid $clr-blue-100;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    &__social {
+      background-color: $clr-blue-400;
+      color: white;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      inline-size: 100%;
+
+      font-weight: $fw-500;
+      font-size: $fs-primary-100;
+      letter-spacing: 4.5px;
+
+      block-size: 100%;
+      inset-inline-start: 0;
+      inset-block-start: 0;
+      opacity: 1;
+      transition: $transition;
+      &__share {
+        color: $clr-blue-300;
+      }
+      &__link {
+        &:focus-visible {
+          outline: 1px solid hsl(0, 0%, 100%);
+        }
+        &__icon-container {
+          display: flex;
+          gap: 1rem;
+          align-items: center;
+        }
+      }
+      &__icon {
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      &__icon-container {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+      }
+    }
+  }
+}
+
+@media (min-width: 376px) {
+  .card {
+    display: flex;
+    inline-size: min(100%, 45.55rem);
+    overflow: visible;
+
+    &__img--wrapper {
+      block-size: auto;
+      inline-size: 705px;
+      background-position: left;
+      border-radius: 0.75rem 0 0 0.75rem;
+    }
+
+    &__main {
+      display: grid;
+      // padding: 0 2rem;
+      z-index: 0;
+      &__content {
+        gap: 0.8rem;
+        &__title {
+          font-size: 1.25rem;
+          line-height: 1.4;
+          word-spacing: 1.9px;
+        }
+      }
+    }
+    &__details {
+      padding: 0 0 2rem;
+      &__btn {
+        &:focus {
+          outline: 1px solid $clr-blue-400;
+        }
+      }
+      &__social {
+        inline-size: max-content;
+        block-size: 55px;
+        inset-inline-start: 276px;
+        inset-block-start: -79px;
+        z-index: 1000;
+        border-radius: 0.5rem;
+
+        &::after {
+          content: "";
+          position: absolute;
+          border-style: solid;
+          border-width: 10px 10px 0;
+          border-color: $clr-blue-400 transparent;
+          bottom: -10px;
+          left: 50%;
+          translate: -50% 0;
+        }
+      }
+    }
+  }
+  .container {
+    padding-inline: 2.5rem;
+  }
+}
+
+.container {
+  padding-inline: 2rem;
+}
+
+.nodisplay {
+  opacity: 0;
+  visibility: hidden;
+}

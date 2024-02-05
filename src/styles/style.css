@@ -68,4 +68,194 @@ a {
   outline: transparent;
 }
 
+body {
+  padding: 1.5rem;
+  font-family: "Manrope", sans-serif;
+  background: hsl(210, 46%, 95%);
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  background: hsl(0, 0%, 100%);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 22px 40px 57px -53px rgba(0, 0, 0, 0.24);
+  -webkit-box-shadow: 22px 40px 57px -53px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 22px 40px 57px -53px rgba(0, 0, 0, 0.24);
+}
+.card__img--wrapper {
+  block-size: 197px;
+  background: url("/src/assets/drawers.jpg") hsl(0, 0%, 100%) no-repeat;
+  background-size: cover;
+  background-position-y: -19px;
+}
+.card__main {
+  display: grid;
+}
+.card__main__content {
+  display: grid;
+  gap: 1rem;
+  padding: 2.2rem 0 1.3rem;
+}
+.card__main__content__title {
+  word-spacing: 1px;
+  color: hsl(217, 19%, 35%);
+}
+.card__main__content__par {
+  font-size: 0.8125rem;
+  word-spacing: 0.65px;
+  color: hsl(212, 23%, 69%);
+}
+.card__details {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.7rem 0rem;
+  position: relative;
+}
+.card__details__content {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  gap: 1rem;
+}
+.card__details__content__img {
+  inline-size: 2.5rem;
+  block-size: 2.5rem;
+  border-radius: 100px;
+}
+.card__details__content__author {
+  font-size: 0.8125rem;
+}
+.card__details__content__author__name {
+  color: hsl(217, 19%, 35%);
+}
+.card__details__content__author__date {
+  color: hsl(212, 23%, 69%);
+}
+.card__details__btn {
+  align-self: center;
+  border: 0;
+  border-radius: 100%;
+  z-index: 1;
+  inline-size: 2rem;
+  block-size: 2rem;
+  display: grid;
+  place-items: center;
+  color: hsl(210, 46%, 95%);
+  transition: all 0.5s;
+}
+.card__details__btn__icon {
+  transition: all 0.5s;
+}
+.card__details__btn.active {
+  background-color: hsl(214, 17%, 51%);
+}
+.card__details__btn.active .card__details__btn__icon {
+  fill: hsl(0, 0%, 100%);
+}
+.card__details__btn:focus {
+  outline: 1px solid hsl(210, 46%, 95%);
+}
+.card__details__btn:hover {
+  cursor: pointer;
+}
+.card__details__social {
+  background-color: hsl(217, 19%, 35%);
+  color: white;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  inline-size: 100%;
+  font-weight: 500;
+  font-size: 0.8125rem;
+  letter-spacing: 4.5px;
+  block-size: 100%;
+  inset-inline-start: 0;
+  inset-block-start: 0;
+  opacity: 1;
+  transition: all 0.5s;
+}
+.card__details__social__share {
+  color: hsl(214, 17%, 51%);
+}
+.card__details__social__link:focus-visible {
+  outline: 1px solid hsl(0, 0%, 100%);
+}
+.card__details__social__link__icon-container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.card__details__social__icon:hover {
+  cursor: pointer;
+}
+.card__details__social__icon-container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+@media (min-width: 376px) {
+  .card {
+    display: flex;
+    inline-size: min(100%, 45.55rem);
+    overflow: visible;
+  }
+  .card__img--wrapper {
+    block-size: auto;
+    inline-size: 705px;
+    background-position: left;
+    border-radius: 0.75rem 0 0 0.75rem;
+  }
+  .card__main {
+    display: grid;
+    z-index: 0;
+  }
+  .card__main__content {
+    gap: 0.8rem;
+  }
+  .card__main__content__title {
+    font-size: 1.25rem;
+    line-height: 1.4;
+    word-spacing: 1.9px;
+  }
+  .card__details {
+    padding: 0 0 2rem;
+  }
+  .card__details__btn:focus {
+    outline: 1px solid hsl(217, 19%, 35%);
+  }
+  .card__details__social {
+    inline-size: max-content;
+    block-size: 55px;
+    inset-inline-start: 276px;
+    inset-block-start: -79px;
+    z-index: 1000;
+    border-radius: 0.5rem;
+  }
+  .card__details__social::after {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-width: 10px 10px 0;
+    border-color: hsl(217, 19%, 35%) transparent;
+    bottom: -10px;
+    left: 50%;
+    translate: -50% 0;
+  }
+  .container {
+    padding-inline: 2.5rem;
+  }
+}
+.container {
+  padding-inline: 2rem;
+}
+
+.nodisplay {
+  opacity: 0;
+  visibility: hidden;
+}
+
 /*# sourceMappingURL=style.css.map */

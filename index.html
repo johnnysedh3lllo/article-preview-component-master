@@ -1,35 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
- 
-  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
-  
-  <title>Frontend Mentor | Article preview component</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <!-- GOOGLE FONTS API -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon-32x32.png"
+    />
 
-  <!-- CSS STYLESHEET -->
-  <link rel="stylesheet" href="src/styles/style.css">
+    <title>Frontend Mentor | Article preview component</title>
 
-</head>
-<body>
+    <!-- GOOGLE FONTS API -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
 
-  Shift the overall look and feel by adding these wonderful 
-  touches to furniture in your home
+    <!-- CSS STYLESHEET -->
+    <link rel="stylesheet" href="src/styles/style.css" />
+  </head>
+  <body>
+    <!-- CARD COMPONENT -->
+    <article class="card">
+      <section class="card__img--wrapper">
+        <!-- <img
+          class="card__img"
+          src="src/assets/drawers.jpg"
+          alt="A green dresser
+          with a love text art on a brick wall, with a vase and a cushion."
+          /> -->
+      </section>
 
-  Ever been in a room and felt like something was missing? Perhaps 
-  it felt slightly bare and uninviting. I’ve got some simple tips 
-  to help you make any room feel complete.
+      <main class="card__main">
+        <section class="card__main__content container">
+          <h4 class="card__main__content__title">
+            Shift the overall look and feel by adding these wonderful touches to
+            furniture in your home
+          </h4>
+          <p class="card__main__content__par">
+            Ever been in a room and felt like something was missing? Perhaps it
+            felt slightly bare and uninviting. I’ve got some simple tips to help
+            you make any room feel complete.
+          </p>
+        </section>
 
-  Michelle Appleton
-  28 Jun 2020
+        <footer class="card__details container">
+          <div class="card__details__content">
+            <div class="card__details__content__img--wrapper">
+              <img
+                class="card__details__content__img"
+                src="src/assets/avatar-michelle.jpg"
+                alt=""
+              />
+            </div>
 
-  Share
-  
-</body>
+            <section class="card__details__content__author">
+              <h4 class="card__details__content__author__name__">
+                Michelle Appleton
+              </h4>
+              <p class="card__details__content__author__date">28 Jun 2020</p>
+            </section>
+          </div>
+
+          <button class="card__details__btn">
+            <!-- <img
+              src="src/assets/icon-share.svg"
+              alt=""
+            /> -->
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13">
+              <path
+                class="card__details__btn__icon"
+                fill="#6E8098"
+                d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"
+              />
+            </svg>
+          </button>
+
+          <section class="card__details__social container nodisplay">
+            <h4 class="card__details__social__share">SHARE</h4>
+
+            <div class="card__details__social__icon-container">
+              <a href="" class="card__details__social__link">
+                <img
+                  src="src/assets/icon-facebook.svg"
+                  alt=""
+                  class="card__details__social__icon"
+                />
+              </a>
+
+              <a href="" class="card__details__social__link">
+                <img
+                  src="src/assets/icon-twitter.svg"
+                  alt=""
+                  class="card__details__social__icon"
+                />
+              </a>
+
+              <a href="" class="card__details__social__link">
+                <img
+                  src="src/assets/icon-pinterest.svg"
+                  alt=""
+                  class="card__details__social__icon"
+                />
+              </a>
+            </div>
+          </section>
+        </footer>
+      </main>
+    </article>
+    <script src="src/script.js"></script>
+  </body>
 </html>
