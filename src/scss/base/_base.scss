@@ -7,6 +7,7 @@ body {
 }
 
 .card {
+  inline-size: 100%;
   background: $clr-white;
   border-radius: 0.75rem;
   overflow: hidden;
