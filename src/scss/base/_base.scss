@@ -6,8 +6,7 @@ body {
   place-items: center;
 }
 
-.card {
-  inline-size: 100%;
+.card { 
   background: $clr-white;
   border-radius: 0.75rem;
   overflow: hidden;
@@ -141,7 +140,7 @@ body {
   }
 }
 
-@media (min-width: 376px) {
+@media (min-width: 426px) {
   .card {
     display: flex;
     inline-size: min(100%, 45.55rem);
